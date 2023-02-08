@@ -6,14 +6,29 @@ using namespace std;
 
 int main()
 {
-    const int SIZE = 10;
+    const int SIZE = 20;
+    const int MAX_RAND_VALUE = 1000;
     short mas[SIZE];
     int i;
-    for (i = 0; i < 10; i++) {
-        mas[i] = i + 1;
-        cout << mas[i] << ' ';
+    int min = MAX_RAND_VALUE+1;
+    for (i = 0; i < SIZE; i++) {
+       
 
     }
+    for (i = 0; i < SIZE; i++) {
+        mas[i] = rand() % 1000;
+        cout << mas[i] << ' ';
+    }
+
+    for (i = 0;i<SIZE;i++){
+        if (mas[i] < min) {
+            min = mas[i];
+        }
+    }
+    cout << endl << "Minimum is:" << min;
+       //for (i = 0; i < min; i++)
+           //cout << i;*/
+    
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
